@@ -1,0 +1,61 @@
+﻿dishonoured:неоплаченный
+settled payment:рассчетный платеж
+transmition:передача
+unsettled:неоплаченный
+eligible:право
+write-off:списанный со счета
+write-off transaction:операция списания
+write-off adjustment:корректировка списания
+arrears letter:письмо о задолженности
+conclusion:вывод
+accumulation period:период накопления
+severity:тяжесть
+overdue:просрочен
+revenue:доход
+issue:проблема
+issue:вопрос
+addendum:добавление
+statement:ведомость
+statement:отчет
+effective date:дата вступления в силу
+assume:предполагать
+reject:отвергнуть
+accounting:учет
+accounting:отчетность
+brief:краткий
+account receivable:дебиторская задолженность
+one-off:единовременный
+prevent:предотвращать
+distinguish:различать
+out of which:из которых
+hazardous:опасный
+adjust:регулировать
+eliminating:уничтожение
+reduct:сокращать
+reduct:уменьшать
+therefore:следовательно
+therefore:поэтому
+encourage:поощерять
+stripped of :лишен
+occur:происходить
+legit:законный
+scheduler:планировщик
+maintain:поддерживать
+maintain:сохранять
+maintain:утверждать
+restore:восстановить
+mandatory:обязательный
+mandatory:принудительный
+familiar:знакомый
+familiar:привычный
+duties:обязанности
+convenient:удобный
+stiff:жесткий
+reveal:раскрыть
+reveal:разоблачать
+overdue:просроченный
+accounting:бухгалтерия
+reject:отказать
+duties:дела
+stripped of :лишенный
+restore:восстанавливать

@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Vacabulary:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Vacabulary_jar</output-path>
+    <root id="archive" name="Vacabulary.jar">
+      <element id="module-output" name="Vacabulary" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/java/Menu.form" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/java/AddWord.form" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/java/Testing.form" />
+    </root>
+  </artifact>
+</component>
