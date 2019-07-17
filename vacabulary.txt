@@ -36,7 +36,7 @@ reduct:уменьшать
 therefore:следовательно
 therefore:поэтому
 encourage:поощерять
-stripped of :лишен
+stripped of:лишен
 occur:происходить
 legit:законный
 scheduler:планировщик
@@ -59,3 +59,57 @@ reject:отказать
 duties:дела
 stripped of :лишенный
 restore:восстанавливать
+maintain:поддержать
+stripped of:лишенный
+suppose:предполагать
+ensure:гарантировать
+ensure:обеспечивать
+bother:беспокоить
+investigate:исследовать
+investigate:изучать
+bother:обеспокоить
+promissory note:вексель
+to take place:иметь место
+corresonding:соответствующий
+substitute:замена
+substitute:заменять
+perform:выполнять
+perform:исполнять
+dispute:спор
+dispute:разногласие
+surely:конечно
+surely:несомненно
+surely:обязательно
+evidence:данные
+evidence:доказательства
+evidence:признаки
+amend:изменить
+amend:вносить поправки
+to be ensure:быть уверенным
+remittance:денежный перевод
+to ensure:гарантировать
+efficiency:эффективность
+desirable:желательный
+desirably:желательно
+delivery:доставка
+accounting month:отчетный месяц
+installments:рассрочка
+facilitate:содействовать
+facilitate:способствовать
+up-to-date:современный
+up-to-date:уточненный
+appropriate:подходящий
+appropriate:соответствующий
+invariably:неизменно
+treasury:казначейство
+approval:утверждение
+approval:одобрение
+accuracy:точность
+settled payment:расчетный платеж
+audit trail:контрольный журнал
+due date:срок оплаты
+reconciliation:смерка
+reconciliation:согласование
+severe:серьезный
+severe:тяжелый
+reject:отклонить

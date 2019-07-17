@@ -3,9 +3,7 @@
     <output-path>$PROJECT_DIR$/out/artifacts/Vacabulary_jar</output-path>
     <root id="archive" name="Vacabulary.jar">
       <element id="module-output" name="Vacabulary" />
-      <element id="file-copy" path="$PROJECT_DIR$/src/main/java/Menu.form" />
-      <element id="file-copy" path="$PROJECT_DIR$/src/main/java/AddWord.form" />
-      <element id="file-copy" path="$PROJECT_DIR$/src/main/java/Testing.form" />
+      <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.18.8" />
     </root>
   </artifact>
 </component>

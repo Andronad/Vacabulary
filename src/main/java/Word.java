@@ -11,4 +11,12 @@ public class Word {
     public void addTranslate(String s){
         translate.add(s);
     }
+    public String getAllTranslates(){
+        String all=new String();
+        for (String s: translate){
+            all=all.concat(s+",");
+        }
+        all=all.substring(0,all.length()-1);
+        return all;
+    }
 }
