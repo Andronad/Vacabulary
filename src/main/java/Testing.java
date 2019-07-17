@@ -35,6 +35,10 @@ public class Testing extends JFrame{
                         ex.printStackTrace();
                     }
                 }
+                if(e.getKeyChar()==KeyEvent.VK_ESCAPE){
+                    countHints++;
+                    answerInput.setText(testingWord.getTranslate().get(0).substring(0,countHints));
+                }
             }
             public void keyReleased(KeyEvent e) {}
         });

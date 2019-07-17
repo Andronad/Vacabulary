@@ -55,13 +55,12 @@ public class Service {
     public void addToDB(String word, String translate) throws SQLException {
         String insrt="insert into words (word,translate,date) values(\""+word+
                 "\",\""+translate+"\",NOW());";
-        Boolean rs=stmt.execute(insrt);
-        System.out.println(rs);
+        stmt.execute(insrt);
     }
     public Word getRandomWord(){
         return getVacabulary().get((int)Math.floor(Math.random()*this.getVacabulary().size()));
     }
-    public String reformatDate(int countDays) throws ParseException {
+    public String reformatDate(int countDays) {
         Date res=new Date();
         res.setDate(res.getDate()-countDays);
         DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.ENGLISH);
