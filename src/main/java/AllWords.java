@@ -1,6 +1,6 @@
 import javax.swing.*;
-import java.io.IOException;
 import java.sql.*;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Comparator;
 
@@ -8,9 +8,9 @@ public class AllWords extends JFrame{
     private JTable table1;
     private JPanel panel1;
     private Service service;
-    public AllWords() throws  SQLException {
+    public AllWords() throws SQLException, ParseException {
         service=new Service();
-        service.fillVacabulary(1);
+        service.fillVacabulary(1,0);
         ArrayList<Word> vacabulary=service.getVacabulary();
         vacabulary.sort(Comparator.comparing(Word::getWord));
         MyTableModel mtm=new MyTableModel(vacabulary);

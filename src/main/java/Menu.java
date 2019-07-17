@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.sql.*;
+import java.text.ParseException;
 import java.util.ArrayList;
 
 public class Menu extends JFrame {
@@ -8,27 +9,32 @@ public class Menu extends JFrame {
     private JButton addWords;
     private JButton testRusEng;
     private JButton vacabularyButton;
-    private ArrayList<Word> vacabulary;
 
     public Menu() {
         testEngRus.addActionListener(e -> {
-            try {
-                new Testing(1);
-            } catch (SQLException ex) {
-                ex.printStackTrace();
+            String result=JOptionPane.showInputDialog("For how many days you want to download base?");
+            if(result!=null) {
+                try {
+                    new Testing(1, Integer.parseInt(result));
+                } catch (Exception ex) {
+                    JOptionPane.showMessageDialog(null,"Error");
+                }
             }
         });
         testRusEng.addActionListener(e -> {
-            try {
-                new Testing(2);
-            } catch (SQLException ex) {
-                ex.printStackTrace();
+            String result=JOptionPane.showInputDialog("For how many days you want to download base?");
+            if(result!=null) {
+                try {
+                    new Testing(2, Integer.parseInt(result));
+                } catch (Exception ex) {
+                    JOptionPane.showMessageDialog(null,"Error");
+                }
             }
         });
         vacabularyButton.addActionListener(e -> {
             try {
                 new AllWords();
-            } catch (SQLException ex) {
+            } catch (SQLException | ParseException ex) {
                 ex.printStackTrace();
             }
         });

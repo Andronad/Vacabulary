@@ -1,7 +1,12 @@
 import lombok.Data;
 
 import java.sql.*;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
 
 @Data
 public class Service {
@@ -14,8 +19,12 @@ public class Service {
                 "jdbc:mysql://localhost:3306/vacabulary","root","qweasd12");
         stmt=con.createStatement();
     }
-    public void fillVacabulary(int type) throws SQLException {
-        String slct="select * from words";
+    public void fillVacabulary(int type,int count) throws SQLException, ParseException {
+        String searchDate="2010-01-01 00:00:00";
+        if(count>0){
+            searchDate=reformatDate(count);
+        }
+        String slct="select * from words where date>\""+searchDate+"\"";
         ResultSet rs=stmt.executeQuery(slct);
         while(rs.next()){
             String word=rs.getString(2);
@@ -26,7 +35,6 @@ public class Service {
             else{
                 addToVacabulary(translate,word);
             }
-
         }
     }
     public void addToVacabulary(String word,String translate){
@@ -52,5 +60,12 @@ public class Service {
     }
     public Word getRandomWord(){
         return getVacabulary().get((int)Math.floor(Math.random()*this.getVacabulary().size()));
+    }
+    public String reformatDate(int countDays) throws ParseException {
+        Date res=new Date();
+        res.setDate(res.getDate()-countDays);
+        DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.ENGLISH);
+        String result=format.format(res);
+        return result;
     }
 }

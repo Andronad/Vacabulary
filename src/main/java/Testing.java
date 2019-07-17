@@ -1,8 +1,7 @@
 import javax.swing.*;
 import java.awt.event.*;
-import java.io.*;
 import java.sql.SQLException;
-import java.util.ArrayList;
+import java.text.ParseException;
 
 public class Testing extends JFrame{
     public JLabel Question;
@@ -10,16 +9,15 @@ public class Testing extends JFrame{
     private JButton checkButton;
     private JPanel testPanel;
     private JButton hintButton;
-    private ArrayList<Word> vacabulary;
     private Word testingWord;
     private int countHints=0;
     private int testingType;
     private Service service;
 
-    public Testing(int type) throws SQLException {
+    public Testing(int type, int countDays) throws SQLException, ParseException {
         testingType=type;
         service=new Service();
-        service.fillVacabulary(testingType);
+        service.fillVacabulary(testingType,countDays);
         checkButton.addActionListener(e -> {
             try {
                 checkAnswer();
