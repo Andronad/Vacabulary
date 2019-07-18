@@ -15,13 +15,11 @@ public class AddWord  extends JFrame{
     public AddWord() throws SQLException {
         setContentPane(addPanel);
         service=new Service();
-        addButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                try {
-                    writeWord();
-                } catch (SQLException ex) {
-                    ex.printStackTrace();
-                }
+        addButton.addActionListener(e -> {
+            try {
+                writeWord();
+            } catch (SQLException ex) {
+                ex.printStackTrace();
             }
         });
         translateInput.addKeyListener(new KeyListener() {

@@ -36,15 +36,13 @@ public class Testing extends JFrame{
                     }
                 }
                 if(e.getKeyChar()==KeyEvent.VK_ESCAPE){
-                    countHints++;
-                    answerInput.setText(testingWord.getTranslate().get(0).substring(0,countHints));
+                    getHint();
                 }
             }
             public void keyReleased(KeyEvent e) {}
         });
         hintButton.addActionListener(e -> {
-            countHints++;
-            answerInput.setText(testingWord.getTranslate().get(0).substring(0,countHints));
+            getHint();
         });
         askQuestion();
         setContentPane(testPanel);
@@ -58,8 +56,14 @@ public class Testing extends JFrame{
         Question.setText(testingWord.getWord());
         answerInput.setText("");
     }
+    public void getHint(){
+        countHints++;
+        if(countHints<=testingWord.getTranslate().get(0).length()){
+            answerInput.setText(testingWord.getTranslate().get(0).substring(0,countHints));
+        }
+    }
     public void checkAnswer() throws SQLException {
-        if(testingWord.getTranslate().indexOf(answerInput.getText())!=-1){
+        if(testingWord.getTranslate().indexOf(answerInput.getText().trim())!=-1){
             JOptionPane.showMessageDialog(null,"Correct\n"+testingWord.getTranslate());
             askQuestion();
         }

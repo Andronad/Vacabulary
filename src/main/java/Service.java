@@ -23,6 +23,7 @@ public class Service {
         String searchDate="2010-01-01 00:00:00";
         if(count>0){
             searchDate=reformatDate(count);
+            System.out.println(searchDate);
         }
         String slct="select * from words where date>\""+searchDate+"\"";
         ResultSet rs=stmt.executeQuery(slct);

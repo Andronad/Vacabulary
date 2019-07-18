@@ -18,7 +18,17 @@ public class MyTableModel extends AbstractTableModel{
         if (column==0) return "Word";
         return "Translates";
     }
-    
+
+    @Override
+    public boolean isCellEditable(int rowIndex, int columnIndex) {
+        return true;
+    }
+
+    @Override
+    public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
+        System.out.println(aValue);
+        System.out.println("edit");
+    }
 
     public Object getValueAt(int r, int c) {
         if(c==0) return vacabulary.get(r).getWord();
