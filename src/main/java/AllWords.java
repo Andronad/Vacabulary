@@ -1,6 +1,5 @@
 import javax.swing.*;
 import java.sql.*;
-import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Comparator;
 
@@ -13,7 +12,6 @@ public class AllWords extends JFrame{
         service.fillVacabulary(1,0);
         ArrayList<Word> vacabulary=service.getVacabulary();
         vacabulary.sort(Comparator.comparing(Word::getWord));
-        System.out.println(vacabulary);
         MyTableModel mtm=new MyTableModel(vacabulary);
         table1=new JTable(mtm);
         table1.setBounds(30,40,800,400);

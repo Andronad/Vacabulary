@@ -1,6 +1,5 @@
 import javax.swing.*;
 import java.sql.*;
-import java.text.ParseException;
 
 public class Menu extends JFrame {
     private JPanel rootPanel;
@@ -36,7 +35,7 @@ public class Menu extends JFrame {
         vacabularyButton.addActionListener(e -> {
             try {
                 new AllWords();
-            } catch (SQLException | ParseException ex) {
+            } catch (SQLException ex) {
                 ex.printStackTrace();
             }
         });
