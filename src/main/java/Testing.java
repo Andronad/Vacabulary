@@ -80,7 +80,7 @@ public class Testing extends JFrame{
                         null,
                         text,
                         "Error",
-                        JOptionPane.YES_NO_CANCEL_OPTION);
+                        JOptionPane.YES_NO_OPTION);
                 if (result == JOptionPane.YES_OPTION) {
 
                     if(testingType==1){
@@ -90,8 +90,8 @@ public class Testing extends JFrame{
                         service.addToDB(answerInput.getText(),testingWord.getWord());
                     }
                     service.addToVacabulary(testingWord.getWord(),answerInput.getText());
-                    askQuestion();
                 }
+                askQuestion();
             }
         }
     }

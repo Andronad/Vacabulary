@@ -2,7 +2,6 @@ import lombok.Data;
 
 import java.sql.*;
 import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -19,7 +18,7 @@ public class Service {
                 "jdbc:mysql://localhost:3306/vacabulary","root","qweasd12");
         stmt=con.createStatement();
     }
-    public void fillVacabulary(int type,int count) throws SQLException, ParseException {
+    public void fillVacabulary(int type,int count) throws SQLException {
         String searchDate="2010-01-01 00:00:00";
         if(count>0){
             searchDate=reformatDate(count);
@@ -48,7 +47,7 @@ public class Service {
             }
         }
         if(!flag){
-            ArrayList<String> tt=new ArrayList<String>();
+            ArrayList<String> tt= new ArrayList<>();
             tt.add(translate);
             vacabulary.add(new Word(word,tt));
         }
@@ -65,7 +64,6 @@ public class Service {
         Date res=new Date();
         res.setDate(res.getDate()-countDays);
         DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.ENGLISH);
-        String result=format.format(res);
-        return result;
+        return format.format(res);
     }
 }

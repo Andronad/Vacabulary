@@ -1,7 +1,6 @@
 import javax.swing.*;
 import java.sql.*;
 import java.text.ParseException;
-import java.util.ArrayList;
 
 public class Menu extends JFrame {
     private JPanel rootPanel;
@@ -10,6 +9,9 @@ public class Menu extends JFrame {
     private JButton testRusEng;
     private JButton vacabularyButton;
 
+    public static void main(String[] args) {
+        new Menu();
+    }
     public Menu() {
         testEngRus.addActionListener(e -> {
             String result=JOptionPane.showInputDialog("For how many days you want to download base?");
@@ -50,7 +52,5 @@ public class Menu extends JFrame {
         setBounds(100,100,300,250);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
-    public static void main(String[] args) {
-        new Menu();
-    }
+
 }

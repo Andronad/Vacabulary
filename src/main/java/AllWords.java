@@ -8,11 +8,12 @@ public class AllWords extends JFrame{
     private JTable table1;
     private JPanel panel1;
     private Service service;
-    public AllWords() throws SQLException, ParseException {
+    public AllWords() throws SQLException {
         service=new Service();
         service.fillVacabulary(1,0);
         ArrayList<Word> vacabulary=service.getVacabulary();
         vacabulary.sort(Comparator.comparing(Word::getWord));
+        System.out.println(vacabulary);
         MyTableModel mtm=new MyTableModel(vacabulary);
         table1=new JTable(mtm);
         table1.setBounds(30,40,800,400);
