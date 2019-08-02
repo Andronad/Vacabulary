@@ -18,6 +18,10 @@ public class Testing extends JFrame{
         testingType=type;
         service=new Service();
         service.fillVacabulary(testingType,countDays);
+        if(service.getVacabulary().size()==0){
+            JOptionPane.showMessageDialog(null,"Empty list");
+            return;
+        }
         checkButton.addActionListener(e -> {
             try {
                 checkAnswer();
