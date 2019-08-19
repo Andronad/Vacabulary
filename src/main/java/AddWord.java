@@ -40,7 +40,7 @@ public class AddWord  extends JFrame{
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
     }
     public void writeWord() throws SQLException {
-        service.addToDB(wordInput.getText(),translateInput.getText());
+        service.addToDB(wordInput.getText().trim(),translateInput.getText().trim());
         wordInput.setText("");
         wordInput.requestFocus();
         translateInput.setText("");

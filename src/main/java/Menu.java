@@ -7,6 +7,7 @@ public class Menu extends JFrame {
     private JButton addWords;
     private JButton testRusEng;
     private JButton vacabularyButton;
+    private JButton testOptionButton;
 
     public static void main(String[] args) {
         new Menu();
@@ -20,6 +21,13 @@ public class Menu extends JFrame {
                 } catch (Exception ex) {
                     JOptionPane.showMessageDialog(null,"Error");
                 }
+            }
+        });
+        testOptionButton.addActionListener(e -> {
+            try {
+                new TestingOptions();
+            } catch (SQLException ex) {
+                ex.printStackTrace();
             }
         });
         testRusEng.addActionListener(e -> {
@@ -48,7 +56,7 @@ public class Menu extends JFrame {
         });
         setContentPane(rootPanel);
         setVisible(true);
-        setBounds(100,100,300,250);
+        setBounds(100,100,300,290);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 

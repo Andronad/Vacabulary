@@ -51,7 +51,7 @@ public class Testing extends JFrame{
         askQuestion();
         setContentPane(testPanel);
         setVisible(true);
-        setBounds(150,200,300,220);
+        setBounds(150,200,300,350);
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
     }
     public void askQuestion(){

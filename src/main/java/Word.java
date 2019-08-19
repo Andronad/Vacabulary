@@ -19,4 +19,7 @@ public class Word {
         all=all.substring(0,all.length()-1);
         return all;
     }
+    public String getRandomTranslate(){
+        return translate.get((int)Math.random()*translate.size());
+    }
 }

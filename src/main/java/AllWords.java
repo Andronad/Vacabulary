@@ -15,6 +15,7 @@ public class AllWords extends JFrame{
         MyTableModel mtm=new MyTableModel(vacabulary);
         table1=new JTable(mtm);
         table1.setBounds(30,40,800,400);
+        table1.setAutoCreateRowSorter(true);
         JScrollPane sp=new JScrollPane(table1);
         add(sp);
         setVisible(true);
