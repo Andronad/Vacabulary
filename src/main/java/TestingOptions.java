@@ -1,4 +1,6 @@
 import javax.swing.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -18,13 +20,47 @@ public class TestingOptions extends JFrame{
 
     public TestingOptions() throws SQLException {
         checkAnswerButton.addActionListener(e -> {
-            String answer=getSelection();
-            if(testingWord.getAllTranslates().indexOf(answer)!=-1){
-                askQuestion();
+            checkAnswer();
+        });
+        a1RadioButton.addKeyListener(new KeyListener() {
+            public void keyTyped(KeyEvent e) {}
+
+            public void keyPressed(KeyEvent e) {
+                if(e.getKeyChar()==KeyEvent.VK_ENTER){
+                    checkAnswer();
+                }
             }
-            else{
-                JOptionPane.showMessageDialog(null,"incorrect");
+            public void keyReleased(KeyEvent e) {}
+        });
+        a2RadioButton.addKeyListener(new KeyListener() {
+            public void keyTyped(KeyEvent e) {}
+
+            public void keyPressed(KeyEvent e) {
+                if(e.getKeyChar()==KeyEvent.VK_ENTER){
+                    checkAnswer();
+                }
             }
+            public void keyReleased(KeyEvent e) {}
+        });
+        a3RadioButton.addKeyListener(new KeyListener() {
+            public void keyTyped(KeyEvent e) {}
+
+            public void keyPressed(KeyEvent e) {
+                if(e.getKeyChar()==KeyEvent.VK_ENTER){
+                    checkAnswer();
+                }
+            }
+            public void keyReleased(KeyEvent e) {}
+        });
+        a4RadioButton.addKeyListener(new KeyListener() {
+            public void keyTyped(KeyEvent e) {}
+
+            public void keyPressed(KeyEvent e) {
+                if(e.getKeyChar()==KeyEvent.VK_ENTER){
+                    checkAnswer();
+                }
+            }
+            public void keyReleased(KeyEvent e) {}
         });
         service=new Service();
         service.fillVacabulary(2,0);
@@ -65,5 +101,14 @@ public class TestingOptions extends JFrame{
         a3RadioButton.setText(options.get(2).getRandomTranslate());
         a4RadioButton.setText(options.get(3).getRandomTranslate());
         a1RadioButton.setSelected(true);
+    }
+    public void checkAnswer(){
+        String answer=getSelection();
+        if(testingWord.getAllTranslates().indexOf(answer)!=-1){
+            askQuestion();
+        }
+        else{
+            JOptionPane.showMessageDialog(null,"incorrect");
+        }
     }
 }
